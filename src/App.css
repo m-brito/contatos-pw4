@@ -1,38 +1,131 @@
-.App {
+body {
+  background-color: #f2f1ef;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.phone-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.phone-book {
+  background-color: #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #71aeff;
+  position: relative;
+  font-size: 16px;
+}
+
+.phone-book::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #71aeff;
+  top: -14px;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.title {
   text-align: center;
+  color: #555;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #4b99ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #4b99ff;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  padding: 10px;
+  background-color: #4b99ff;
   color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #8dbeff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f7ff;
+  border: 1px solid #69aaff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-phone {
+  color: #777;
+  font-size: 14px;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+  background-color: #ffc4c4;
+  border: 1px solid #ff5b5b;
 }
